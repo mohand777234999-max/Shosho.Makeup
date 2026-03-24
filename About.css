@@ -1,0 +1,141 @@
+.about-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fff 0%, #faf5f9 100%);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.about-text h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: 4px;
+}
+
+.about-text p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+
+.stat-text {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.image-frame {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 5px solid white;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.image-frame:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text h3 {
+    font-size: 2rem;
+  }
+
+  .image-frame img {
+    height: 350px;
+  }
+
+  .stats {
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 0;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .image-frame img {
+    height: 250px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-text {
+    font-size: 0.9rem;
+  }
+}
